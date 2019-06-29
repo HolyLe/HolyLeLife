@@ -26,12 +26,10 @@ class HolyTabbarViewController: UITabBarController {
     func setItems(){
         let color = UIColor.black
         let selectedColor = UIColor.red
-        
-        
         let items = [
             HolyItem.init(image: nil, color: color, selectedColor: selectedColor, title: "生活", isMid:false ,classString: "HolyLife"),
             HolyItem.init(image: nil, color: color, selectedColor: selectedColor, title: "直播", isMid:false ,classString: "HolyLive"),
-            HolyItem.init(image: nil, color: color, selectedColor: selectedColor, title: "", isMid:false ,classString: "HolyAdd"),
+            HolyItem.init(image: nil, color: color, selectedColor: selectedColor, title: "", isMid:true ,classString: "HolyAdd"),
             HolyItem.init(image: nil, color: color, selectedColor: selectedColor, title: "信息", isMid:false ,classString: "HolyMessage"),
             HolyItem.init(image: nil, color: color, selectedColor: selectedColor, title: "我的", isMid:false ,classString: "HolyMine")
         ]
@@ -39,26 +37,25 @@ class HolyTabbarViewController: UITabBarController {
         var createItems = [UINavigationController]()
         
         for item in items {
-            createItems.append(getItemsByItem(item))
+            if let vc = getItemsByItem(item){
+                createItems.append(vc)
+            }
         }
-        self.viewControllers = createItems
+        setViewControllers(createItems, animated: false)
     }
     
 
-    func getItemsByItem(_ item : HolyItem) -> UINavigationController {
-        var naviItem = UINavigationItem.init(title: item.isMid ? "": item.title)
-        class customClass: UITableView {
-            
+    func getItemsByItem(_ item : HolyItem) -> UINavigationController? {
+        let tItem = UITabBarItem.init(title: item.isMid ? "": item.title, image: (item.image == nil) ? nil : UIImage.init(named: item.image!), selectedImage: (item.image == nil) ? nil : UIImage.init(named: item.image!))
+        //创建控制器对象
+        if let childVcClass = getClassFromString(item.classString) as? UIViewController.Type{
+            let vc : UIViewController = childVcClass.init()
+            let navigation = UINavigationController.init(rootViewController: vc)
+            vc.title = item.title
+            navigation.tabBarItem = tItem
+            return navigation
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-            let myclass = Bundle.main.classNamed(item.classString)
-           
-        }
-        
-        
-        let navigation = UINavigationController.init(rootViewController: UIViewController.init())
-        
-        return navigation
+        return nil
     }
 
     /*

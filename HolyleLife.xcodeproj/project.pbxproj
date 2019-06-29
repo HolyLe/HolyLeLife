@@ -12,8 +12,13 @@
 		7318B4A222C4FDD20065AC37 /* HolyAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318B4A122C4FDD20065AC37 /* HolyAdd.swift */; };
 		7318B4A422C4FDDF0065AC37 /* HolyMine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318B4A322C4FDDF0065AC37 /* HolyMine.swift */; };
 		7318B4AC22C502C70065AC37 /* HolyTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7318B4AB22C502C70065AC37 /* HolyTabbarViewController.swift */; };
+		7324200D22C59FF300B14EC6 /* HolyMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7324200C22C59FF300B14EC6 /* HolyMessage.swift */; };
 		7363BF5222C3290D00BDC66B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7363BF5122C3290D00BDC66B /* AppDelegate.swift */; };
 		7363BF5922C3290E00BDC66B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7363BF5822C3290E00BDC66B /* Assets.xcassets */; };
+		73E00C4022C71CC9001AC8F7 /* UntilsMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E00C3F22C71CC9001AC8F7 /* UntilsMain.swift */; };
+		73E00C4222C7448E001AC8F7 /* HolyPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E00C4122C7448E001AC8F7 /* HolyPlayer.swift */; };
+		73E00C4422C74BD7001AC8F7 /* HolyPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E00C4322C74BD7001AC8F7 /* HolyPlayerView.swift */; };
+		73E00C4622C74D2A001AC8F7 /* HolyPlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73E00C4522C74D2A001AC8F7 /* HolyPlayerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +27,15 @@
 		7318B4A122C4FDD20065AC37 /* HolyAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyAdd.swift; sourceTree = "<group>"; };
 		7318B4A322C4FDDF0065AC37 /* HolyMine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyMine.swift; sourceTree = "<group>"; };
 		7318B4AB22C502C70065AC37 /* HolyTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyTabbarViewController.swift; sourceTree = "<group>"; };
+		7324200C22C59FF300B14EC6 /* HolyMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyMessage.swift; sourceTree = "<group>"; };
 		7363BF4E22C3290D00BDC66B /* HolyleLife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HolyleLife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363BF5122C3290D00BDC66B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7363BF5822C3290E00BDC66B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7363BF5D22C3290E00BDC66B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73E00C3F22C71CC9001AC8F7 /* UntilsMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UntilsMain.swift; sourceTree = "<group>"; };
+		73E00C4122C7448E001AC8F7 /* HolyPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyPlayer.swift; sourceTree = "<group>"; };
+		73E00C4322C74BD7001AC8F7 /* HolyPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyPlayerView.swift; sourceTree = "<group>"; };
+		73E00C4522C74D2A001AC8F7 /* HolyPlayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HolyPlayerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +103,7 @@
 		7318B4A722C501DA0065AC37 /* HolyMessage */ = {
 			isa = PBXGroup;
 			children = (
+				7324200C22C59FF300B14EC6 /* HolyMessage.swift */,
 			);
 			path = HolyMessage;
 			sourceTree = "<group>";
@@ -161,6 +172,8 @@
 		7363BF6622C329C300BDC66B /* Untils */ = {
 			isa = PBXGroup;
 			children = (
+				73E00C3D22C71CC9001AC8F7 /* HolyPlayer */,
+				73E00C3E22C71CC9001AC8F7 /* Tool */,
 			);
 			path = Untils;
 			sourceTree = "<group>";
@@ -180,6 +193,24 @@
 				7363BF5D22C3290E00BDC66B /* Info.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		73E00C3D22C71CC9001AC8F7 /* HolyPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				73E00C4122C7448E001AC8F7 /* HolyPlayer.swift */,
+				73E00C4322C74BD7001AC8F7 /* HolyPlayerView.swift */,
+				73E00C4522C74D2A001AC8F7 /* HolyPlayerProtocol.swift */,
+			);
+			path = HolyPlayer;
+			sourceTree = "<group>";
+		};
+		73E00C3E22C71CC9001AC8F7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				73E00C3F22C71CC9001AC8F7 /* UntilsMain.swift */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,11 +284,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				7363BF5222C3290D00BDC66B /* AppDelegate.swift in Sources */,
+				73E00C4422C74BD7001AC8F7 /* HolyPlayerView.swift in Sources */,
+				7324200D22C59FF300B14EC6 /* HolyMessage.swift in Sources */,
 				7318B4A222C4FDD20065AC37 /* HolyAdd.swift in Sources */,
+				73E00C4622C74D2A001AC8F7 /* HolyPlayerProtocol.swift in Sources */,
+				73E00C4222C7448E001AC8F7 /* HolyPlayer.swift in Sources */,
 				7318B4AC22C502C70065AC37 /* HolyTabbarViewController.swift in Sources */,
 				7318B4A022C4FDC50065AC37 /* HolyLive.swift in Sources */,
 				7318B49E22C4FDB80065AC37 /* HolyLife.swift in Sources */,
 				7318B4A422C4FDDF0065AC37 /* HolyMine.swift in Sources */,
+				73E00C4022C71CC9001AC8F7 /* UntilsMain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +420,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/HolyleLife/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -401,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/HolyleLife/Resource/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

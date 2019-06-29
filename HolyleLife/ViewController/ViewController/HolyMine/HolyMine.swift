@@ -6,4 +6,8 @@
 //  Copyright © 2019 Holyle. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class HolyMine: UIViewController {
+    
+}
